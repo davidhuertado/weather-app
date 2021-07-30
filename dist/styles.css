@@ -1,0 +1,84 @@
+body {
+  background-color: #001e6c;
+  font-family: 'Montserrat', sans-serif;
+}
+.main {
+  max-width: 800px;
+  background-color: #035397;
+  border-radius: 10px;
+}
+.logo-div {
+  width: 65px;
+}
+.h1-div {
+  padding-top: 10px;
+  color: #fff;
+}
+.h1-div h1 {
+  font-size: 1.7rem;
+}
+.form-control {
+  padding: 0.6rem 0.75rem;
+  font-size: 1.1rem;
+}
+
+.btn-light {
+  font-size: 1.1rem;
+  background-color: #d9faff;
+}
+
+.btn-check:active + .btn-light,
+.btn-check:checked + .btn-light,
+.btn-light.active,
+.btn-light:active,
+.show > .btn-light.dropdown-toggle,
+.btn-check:focus + .btn-light,
+.btn-light:focus {
+  color: #000;
+  background-color: #d9faff;
+  background-color: #d9faff;
+  border-color: #d9faff;
+  box-shadow: none;
+}
+.btn-check:active + .btn-light:focus,
+.btn-check:checked + .btn-light:focus,
+.btn-light.active:focus,
+.btn-light:active:focus,
+.show > .btn-light.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.city-h2 {
+  color: #fff;
+}
+
+.temp {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 0;
+}
+.temp-img {
+  width: 250px;
+  background-color: #5089c6;
+  border-radius: 10px;
+}
+.ul-div {
+  background-color: #5089c6;
+  border-radius: 10px;
+  width: 250px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+.ul-div ul {
+  list-style: none;
+  text-align: left;
+}
+.ul-div li {
+  color: #fff;
+  line-height: 1.7;
+  font-weight: 500;
+}
