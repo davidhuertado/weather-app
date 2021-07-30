@@ -2,7 +2,7 @@ const cityInput = document.getElementById('city-input');
 const searchBtn = document.getElementById('search-btn');
 
 const processWeatherData = function (data) {
-  let processedWeather = {
+  const processedWeather = {
     city: data.name,
     country: data.sys.country,
     temp: Math.round(data.main.temp),
@@ -14,6 +14,7 @@ const processWeatherData = function (data) {
   };
   return processedWeather;
 };
+
 const displayData = function (data) {
   const cityH2 = document.querySelector('.city-h2');
   const temp = document.querySelector('.temp');
@@ -23,7 +24,6 @@ const displayData = function (data) {
   const weatherIcon = document.querySelector('.weather-icon');
 
   cityH2.textContent = `${data.city}, ${data.country}`;
-
   temp.textContent = `${data.temp}°C`;
   feelsLike.textContent = `Feels like: ${data.feelsLike}°C`;
   wind.textContent = `Wind: ${data.wind}km/h`;
@@ -38,25 +38,21 @@ async function getWeather(city) {
       { mode: 'cors' }
     );
 
-    let weatherData = await weatherResponse.json();
-    let processedWeather = processWeatherData(weatherData);
+    const weatherData = await weatherResponse.json();
+    const processedWeather = processWeatherData(weatherData);
     displayData(processedWeather);
-
-    console.log(processedWeather);
-    console.log(weatherData);
   } catch (error) {
     console.error(error);
   }
 }
-searchBtn.addEventListener('click', function () {
-  let city = cityInput.value;
+searchBtn.addEventListener('click', () => {
+  const city = cityInput.value;
   getWeather(city);
 });
 
-cityInput.addEventListener('keydown', function (e) {
-  console.log(e.key);
+cityInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
-    let city = cityInput.value;
+    const city = cityInput.value;
     getWeather(city);
   }
 });
