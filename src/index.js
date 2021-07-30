@@ -10,7 +10,7 @@ const processWeatherData = function (data) {
     wind: Math.round(data.wind.speed),
     humidity: data.main.humidity,
     description: data.weather[0].description,
-    imgUrl: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
+    imgUrl: `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
   };
   return processedWeather;
 };
@@ -34,7 +34,7 @@ const displayData = function (data) {
 async function getWeather(city) {
   try {
     const weatherResponse = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=d9523b5c914cab4b5f04bd6fa0ad108a`,
+      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=d9523b5c914cab4b5f04bd6fa0ad108a`,
       { mode: 'cors' }
     );
 
